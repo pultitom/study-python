@@ -24,4 +24,23 @@ capitals = ["Vienna", "London", "Paris", "Berlin", "Zurich", "Vilnius", "Hamburg
 print(capitals)
 print("capitals[5] = " + capitals[5])
 print("capitals[-2] = " + capitals[-2])
-print("Nummber of capitals: " + str(len(capitals)))
+print("Number of capitals: " + str(len(capitals)))
+
+print("\n-- tuples ------------------------------")
+t = ("tuples", "are", "immutable")
+print(t)
+print("t[0] = " + t[0])
+
+print("\n-- slicing -----------------------------")
+print("first three capitals: " + str(capitals[0:3]))
+print("last three capitals: " + str(capitals[-3:]))
+print("every second capital: " + str(capitals[::2]))
+
+
+print("\n-- repetitions -------------------------")
+hello = "Hello World!"
+print(hello)
+hello = 2 * hello
+print(hello)
+print(capitals * 2)
+print(t * 3)
