@@ -44,3 +44,30 @@ hello = 2 * hello
 print(hello)
 print(capitals * 2)
 print(t * 3)
+
+print("\n-- dictionaries ------------------------")
+en_lt = { "red" : "raudona", "yellow" : "geltona", "black" : "juoda" }
+print(en_lt)
+print("en_lt[\"red\"] = " + en_lt["red"])
+en_lt["blue"] = "mėlyna"
+print(en_lt)
+poppedWord = en_lt.pop("blue")
+print("popped '" + poppedWord + "' from the list")
+print(en_lt)
+poppedNonExistingWord = en_lt.pop("doesntExist", "no capital")
+print("tried to pop non-existing '" + poppedNonExistingWord + "' from the list")
+print(en_lt)
+(english, lithuanian) = en_lt.popitem()
+print("(english, lithuanian) = " + str((english, lithuanian)))
+print(en_lt)
+print("get() non existing item: " + str(en_lt.get("not existing")))
+print("get() existing item: " + str(en_lt.get("black")))
+shallow_dictionary_copy = en_lt.copy()
+print("copied dictionary: " + str(shallow_dictionary_copy))
+shallow_dictionary_copy["yellow"] = "geltona geltona"
+print("updated dictionary copy: " + str(shallow_dictionary_copy))
+print("original dictionary: " + str(en_lt))
+merged_dictionary = {}
+merged_dictionary.update(en_lt)
+merged_dictionary.update(shallow_dictionary_copy)
+print("merged dictionary: " + str(merged_dictionary))
